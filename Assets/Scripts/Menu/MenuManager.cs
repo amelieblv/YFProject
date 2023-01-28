@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    // Номер сцены, когда нажата кнопка начала
+    // Индекс сцены, переносит на неё при нажатии кнопки
     public int startGameScene;
 
     public void StartGame()
