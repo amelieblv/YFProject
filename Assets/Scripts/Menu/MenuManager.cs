@@ -10,8 +10,8 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    // Индекс сцены, переносит на неё при нажатии кнопки
-    public int startGameScene;
+    // Название сцены, переносит на неё при нажатии кнопки
+    public string startGameScene { get; set; }
 
     public void StartGame()
     {
