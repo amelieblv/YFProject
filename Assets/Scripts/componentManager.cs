@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class componentManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class componentManager : MonoBehaviour
         {
             this.controledObject = objectToSet;
         }
-        public void moveObject(float x,float y, float z)
+        public void moveObject(float x, float y, float z)
         {
             controledObject.transform.position += controledObject.transform.forward * z * Time.deltaTime;
             controledObject.transform.position += controledObject.transform.right * x * Time.deltaTime;
@@ -28,7 +29,7 @@ public class componentManager : MonoBehaviour
     public class limitedMovementComponent : movementComponent
     {
 
-        public limitedMovementComponent(GameObject objectToSet) :base(objectToSet) 
+        public limitedMovementComponent(GameObject objectToSet) : base(objectToSet)
         {
         }
         public override void rotateObject(float rotateX, float rotateY, float rotateZ)
@@ -40,21 +41,52 @@ public class componentManager : MonoBehaviour
             Quaternion rot = controledObject.transform.localRotation;
             if (rot.x > 0.7f)
             {
-                controledObject.transform.localEulerAngles = new Vector3(82f, rot.y, rot.z);
+                controledObject.transform.localEulerAngles = new Vector3(83f, rot.y, rot.z);
             }
             if (rot.x < -0.7f)
             {
-                
-                controledObject.transform.localEulerAngles = new Vector3(-82f, rot.y, rot.z);
-
-            }
-            else
-            {
-                Debug.Log(rot.x);
+                controledObject.transform.localEulerAngles = new Vector3(-83f, rot.y, rot.z);
             }
         }
     }
 
+    public abstract class enemyNavigationComponent
+    {
+        protected GameObject target;
+        protected NavMeshAgent agent;
+        protected float lookRadius;
+        public enemyNavigationComponent(GameObject targetToSet, NavMeshAgent agentToSet, float lookRadiusToSet)
+        {
+            this.target = targetToSet;
+            this.agent = agentToSet;
+            this.lookRadius = lookRadiusToSet;
+        }
+
+        public void moveEnemy()
+        {
+            float distance = Vector3.Distance(target.transform.position, agent.transform.position);
+            if (distance <= lookRadius)
+            {
+                agent.SetDestination(target.transform.position);
+                if (distance <= agent.stoppingDistance)
+                {
+                    this.attack();
+                }
+            }
+        }
+        protected void attack()
+        {
+
+        }
+    }
+
+    public class shadowEnemyComponent: enemyNavigationComponent
+    {
+        public shadowEnemyComponent(GameObject targetToSet, NavMeshAgent agentToSet, float lookRadiusToSet) : base(targetToSet, agentToSet, lookRadiusToSet)
+        {
+
+        }
+    }
     void Update()
     {
         
