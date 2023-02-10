@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3022
+  controlID: 3304
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3023
+  controlID: 3383
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3024
+  controlID: 3384
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
-    y: 73
+    x: 385
+    y: 19
     width: 1119
     height: 552
   m_ViewDataDictionary: {fileID: 0}
@@ -339,7 +339,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -403,7 +403,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1ef6ffff20f6ffffe8f8ffff26f9ffff1afaffff10fbffff
+      m_ExpandedIDs: cef4ffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -652,9 +652,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.031024, y: 5.82364, z: 1.6643523}
+    m_Target: {x: 7.207473, y: 1.5339136, z: -6.0724707}
     speed: 2
-    m_Value: {x: -2.031024, y: 5.82364, z: 1.6643523}
+    m_Value: {x: 7.207473, y: 1.5339136, z: -6.0724707}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -701,13 +701,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10186148, y: 0.86113375, z: -0.19058223, w: 0.46020275}
+    m_Target: {x: 0.0030179485, y: 0.41323483, z: -0.001359658, w: 0.9106433}
     speed: 2
-    m_Value: {x: 0.101573706, y: 0.861808, z: -0.19073147, w: 0.45890248}
+    m_Value: {x: 0.0030179485, y: 0.4132348, z: -0.001359658, w: 0.9106432}
   m_Size:
-    m_Target: 0.3427001
+    m_Target: 0.7242544
     speed: 2
-    m_Value: 0.3427001
+    m_Value: 0.7242544
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -801,22 +801,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials/Metal_Plates
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials/Metal_Plates
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Way to dream\Niktofobija\YFProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 005d0000
-    m_LastClickedID: 23808
-    m_ExpandedIDs: 00000000fc5c000000ca9a3b
+    m_SelectedIDs: fe5e0000
+    m_LastClickedID: 24318
+    m_ExpandedIDs: 000000009e5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -844,7 +844,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc5c0000fe5c0000005d000000ca9a3b
+    m_ExpandedIDs: 000000009e5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
