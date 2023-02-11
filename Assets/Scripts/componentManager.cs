@@ -80,78 +80,13 @@ public class componentManager : MonoBehaviour
         }
     }
 
-    public class shadowEnemyComponent : enemyNavigationComponent
+    public class shadowEnemyComponent: enemyNavigationComponent
     {
         public shadowEnemyComponent(GameObject targetToSet, NavMeshAgent agentToSet, float lookRadiusToSet) : base(targetToSet, agentToSet, lookRadiusToSet)
         {
 
         }
     }
-
-    public abstract class item
-    {
-        protected string name;
-        protected Sprite imageOfAnItem;
-        public item(string nameToSet, string pathToImage)
-        {
-            this.name = nameToSet;
-            try
-            {
-                this.imageOfAnItem = Resources.LoadAll<Sprite>("Sprites/" + pathToImage)[0];
-            }
-            catch
-            {
-                this.imageOfAnItem = null;
-            }
-        }
-
-        public Sprite getImage()
-        {
-            return this.imageOfAnItem;
-        }
-
-        public string getName()
-        {
-            return this.name;
-        }
-    }
-
-    public class basicItem : item
-    {
-        public basicItem(string nameToSet, string pathToImage) : base(nameToSet, pathToImage)
-        {
-
-        }
-    }
-    public abstract class inventory
-    {
-        protected List<item> items;
-        public inventory()
-        {
-            items = new List<item>();
-        }
-
-        public List<string> getInventoryItems()
-        {
-            List<string> toReturn = new List<string>();
-            foreach (item itemToReturn in this.items)
-            {
-                toReturn.Add(itemToReturn.getName());
-            }
-            return toReturn;
-        }
-
-        public void addItem(item itemToAdd)
-        {
-            items.Add(itemToAdd);
-        }
-
-    }
-
-    public class basicInventory:inventory
-    {
-    }
-
     void Update()
     {
         
