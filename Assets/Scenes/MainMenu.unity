@@ -603,6 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef468a00c8d5b5548b10e0931f194469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGameScene: AlexTest
 --- !u!4 &495917748
 Transform:
   m_ObjectHideFlags: 0
