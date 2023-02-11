@@ -9,6 +9,7 @@ public class inventoryManager : MonoBehaviour
     {
         playerInventory = new componentManager.basicInventory();
         playerInventory.addItem(new componentManager.basicItem("cucumber",null));
+        playerInventory.addItem(new componentManager.basicItem("apple", null));
     }
 
     // Update is called once per frame
