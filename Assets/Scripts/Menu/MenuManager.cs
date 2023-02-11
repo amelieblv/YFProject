@@ -11,7 +11,8 @@ public class MenuManager : MonoBehaviour
     }
 
     // Название сцены, переносит на неё при нажатии кнопки
-    public string startGameScene { get; set; }
+    [SerializeField]
+    private string startGameScene;
 
     public void StartGame()
     {
