@@ -37,7 +37,10 @@ public class PhoneControl : MonoBehaviour
             {
                 message.clip = message2;
                 message.PlayDelayed(1);
-                message_counter++;
+                if (message_counter == 2)
+                {
+                    message_counter++;
+                }    
             }
             if (message_counter == 3)
             {
@@ -48,7 +51,7 @@ public class PhoneControl : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape) == true)
         {
             Phone.SetActive(false);
-            if (message_counter < 3)
+            if (message_counter == 1)
             {
                 message_counter++;
             }
