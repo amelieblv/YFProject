@@ -10,6 +10,7 @@ public class PhoneControl : MonoBehaviour
     [SerializeField] private int message_counter = 1;
     [SerializeField] private AudioClip message2;
     [SerializeField] private AudioClip message3;
+    private bool delay = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +38,7 @@ public class PhoneControl : MonoBehaviour
             {
                 message.clip = message2;
                 message.PlayDelayed(1);
-                if (message_counter == 2)
-                {
-                    message_counter++;
-                }    
+                delay = false;
             }
             if (message_counter == 3)
             {
@@ -53,7 +51,12 @@ public class PhoneControl : MonoBehaviour
             Phone.SetActive(false);
             if (message_counter == 1)
             {
-                message_counter++;
+                message_counter = 2;
+                delay = true;
+            }
+            if (message_counter == 2 && delay == false)
+            {
+                message_counter = 3;
             }
         }
     }
