@@ -512,6 +512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Phone: {fileID: 922047513}
   message: {fileID: 922047517}
+  message_counter: 1
+  message2: {fileID: 8300000, guid: 13d3795b536bd5641996104420a87782, type: 3}
+  message3: {fileID: 8300000, guid: 0f8ae2c70a09598468ef5b89033e24b4, type: 3}
 --- !u!136 &1484092692
 CapsuleCollider:
   m_ObjectHideFlags: 0
