@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b3912d4abceede44ba18f97a9a55dde7
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/programmersTestingScenes/AlexTest.unity
+    guid: d80ab313aa2fdc74e907dd29d1fb5ae7
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 71c83358d4e2ee14c9462a98f9c7abed
   m_configObjects: {}
