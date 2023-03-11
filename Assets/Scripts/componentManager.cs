@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class componentManager : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class componentManager : MonoBehaviour
                 }
             }
         }
-        protected void attack()
+        protected virtual void attack()
         {
 
         }
@@ -85,6 +86,10 @@ public class componentManager : MonoBehaviour
         public shadowEnemyComponent(GameObject targetToSet, NavMeshAgent agentToSet, float lookRadiusToSet) : base(targetToSet, agentToSet, lookRadiusToSet)
         {
 
+        }
+        protected override void attack()
+        {
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 
