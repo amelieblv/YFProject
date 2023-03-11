@@ -32,7 +32,6 @@ public class PhoneControl : MonoBehaviour
             if (messageCounter == 1)
             {
                 message.PlayDelayed(1);
-                Debug.Log(messageCounter);
             }
             if (messageCounter == 2)
             {
