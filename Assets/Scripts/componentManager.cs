@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using System.Xml;
 
 public class componentManager : MonoBehaviour
 {
     // Это тот самый сборник компонентов, поэтому прежде чем менять тут что-то ПОДУМАЙТЕ ТЩАТЕЛЬНО!!!
+    
     public class movementComponent
     {
         protected GameObject controledObject;
@@ -75,9 +77,9 @@ public class componentManager : MonoBehaviour
                 }
             }
         }
-        protected void attack()
+        protected virtual void attack()
         {
-            SceneManager.LoadScene("DeathScreen");
+
         }
     }
 
@@ -86,6 +88,10 @@ public class componentManager : MonoBehaviour
         public shadowEnemyComponent(GameObject targetToSet, NavMeshAgent agentToSet, float lookRadiusToSet) : base(targetToSet, agentToSet, lookRadiusToSet)
         {
 
+        }
+        protected override void attack()
+        {
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 
@@ -124,6 +130,24 @@ public class componentManager : MonoBehaviour
 
         }
     }
+
+    public class itemBuilder
+    {
+        public IDictionary<string, item> registeredItems = new Dictionary<string, item>();
+        protected XmlDocument itemList = new XmlDocument();
+        protected TextAsset itemListFile;
+        public void registerItems()
+        {
+            itemListFile = (TextAsset)Resources.Load("itemList");
+            itemList.LoadXml(itemListFile.text);
+            XmlNodeList nodes= itemList.FirstChild.ChildNodes;
+            for (int i =0; i<nodes.Count; i++)
+            {
+                registeredItems.Add(nodes[i].Attributes.GetNamedItem("itemName").Value, new basicItem(nodes[i].Attributes.GetNamedItem("itemName").Value, "itemSprites/"+nodes[i].Attributes.GetNamedItem("image").Value));
+              
+            }
+        }
+    }
     public abstract class inventory
     {
         protected List<item> items;
@@ -151,6 +175,7 @@ public class componentManager : MonoBehaviour
 
     public class basicInventory:inventory
     {
+
     }
 
     void Update()
