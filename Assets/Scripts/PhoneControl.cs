@@ -7,7 +7,7 @@ public class PhoneControl : MonoBehaviour
 {
     [SerializeField] private GameObject Phone;
     [SerializeField] private AudioSource message;
-    [SerializeField] private int message_counter = 1;
+    [SerializeField] private int messageCounter = 1;
     [SerializeField] private AudioClip message2;
     [SerializeField] private AudioClip message3;
     private bool delay = false;
@@ -26,37 +26,37 @@ public class PhoneControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey("space") == true)
+        if (Input.GetKey("space"))
         {
             Phone.SetActive(true);
-            if (message_counter == 1)
+            if (messageCounter == 1)
             {
                 message.PlayDelayed(1);
-                Debug.Log(message_counter);
+                Debug.Log(messageCounter);
             }
-            if (message_counter == 2)
+            if (messageCounter == 2)
             {
                 message.clip = message2;
                 message.PlayDelayed(1);
                 delay = false;
             }
-            if (message_counter == 3)
+            if (messageCounter == 3)
             {
                 message.clip = message3;
                 message.PlayDelayed(1);
             }
         }
-        if (Input.GetKey(KeyCode.Escape) == true)
+        if (Input.GetKey(KeyCode.Escape))
         {
             Phone.SetActive(false);
-            if (message_counter == 1)
+            if (messageCounter == 1)
             {
-                message_counter = 2;
+                messageCounter = 2;
                 delay = true;
             }
-            if (message_counter == 2 && delay == false)
+            if (messageCounter == 2 && delay == false)
             {
-                message_counter = 3;
+                messageCounter = 3;
             }
         }
     }
