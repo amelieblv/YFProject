@@ -1,0 +1,6 @@
+<itemList>
+  <node itemName="cucumber" image="cucumber.jpg">
+  </node>
+  <node itemName="apple" image="apple.jpg">
+  </node>
+</itemList>
