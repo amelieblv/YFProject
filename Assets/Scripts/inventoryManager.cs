@@ -4,11 +4,13 @@ using UnityEngine;
 public class inventoryManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    private componentManager.basicInventory playerInventory;
+    private componentManager.basicInventory playerInventory= new componentManager.basicInventory();
+    private componentManager.itemBuilder itemRegister = new componentManager.itemBuilder();
     void Start()
     {
-        playerInventory = new componentManager.basicInventory();
-        playerInventory.addItem(new componentManager.basicItem("cucumber",null));
+        itemRegister.registerItems();
+        playerInventory.addItem(itemRegister.registeredItems["cucumber"]);
+        playerInventory.addItem(itemRegister.registeredItems["apple"]);
     }
 
     // Update is called once per frame
